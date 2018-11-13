@@ -1,0 +1,48 @@
+version: '3'
+services:
+  # This container has testcase related functionality on it.
+  #  - Generating test cases
+  #  - Scoring tools against test cases (making tool confusion matrices)
+  sababi:
+    build: ./sa_babi
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  juliet:
+    build: ./juliet
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  # This container tokenizes the testcase files.
+  tokenize:
+    build: ./tokenizer
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  # This container runs the clang static analysis engine on the testcases.
+  # https://clang-analyzer.llvm.org/
+  clang_sa:
+    build: ./sa_tools/clang_sa
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  # This container runs cppcheck on the testscases
+  # http://cppcheck.sourceforge.net/
+  cppcheck:
+    build: ./sa_tools/cppcheck
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  # This container runs the frama-c value analysis on the testcases
+  # https://frama-c.com/
+  frama-c:
+    build: ./sa_tools/frama-c
+    volumes:
+      - "${DATA_DIR}:/mnt/data"
+
+  # This container parses the output from all static analysis tools
+  # into a common format
+  tool_parser:
+    build: ./sparser
+    volumes:
+      - "${DATA_DIR}:/mnt/data"

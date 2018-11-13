@@ -1,0 +1,4 @@
+72dc748c.c: In function 'main':
+72dc748c.c:6:10: warning: variable 'entity_7' set but not used [-Wunused-but-set-variable]
+     char entity_7[27];        // Tag.BODY
+          ^~~~~~~~

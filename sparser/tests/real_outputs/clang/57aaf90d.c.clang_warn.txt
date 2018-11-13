@@ -1,0 +1,4 @@
+57aaf90d.c:20:43: warning: no newline at end of file [-Wnewline-eof]
+}                             // Tag.OTHER
+                                          ^
+1 warning generated.

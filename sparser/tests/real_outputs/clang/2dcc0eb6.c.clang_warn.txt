@@ -1,0 +1,4 @@
+2dcc0eb6.c:22:45: warning: no newline at end of file [-Wnewline-eof]
+}                               // Tag.OTHER
+                                            ^
+1 warning generated.

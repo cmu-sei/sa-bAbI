@@ -1,0 +1,10 @@
+074db154.c: In function 'main':
+074db154.c:13:10: warning: variable 'entity_2' set but not used [-Wunused-but-set-variable]
+     char entity_2[36];                                   // Tag.BODY
+          ^~~~~~~~
+074db154.c:6:10: warning: variable 'entity_4' set but not used [-Wunused-but-set-variable]
+     char entity_4[70];                                   // Tag.BODY
+          ^~~~~~~~
+074db154.c:4:10: warning: variable 'entity_7' set but not used [-Wunused-but-set-variable]
+     char entity_7[37];                                   // Tag.BODY
+          ^~~~~~~~

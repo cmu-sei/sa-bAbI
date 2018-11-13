@@ -1,0 +1,4 @@
+mongoengine
+yattag
+pytest
+six

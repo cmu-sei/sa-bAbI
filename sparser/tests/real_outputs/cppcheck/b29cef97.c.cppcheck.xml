@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="1.84"/>
+    <errors>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;entity_7[24]&apos; accessed at index 77, which is out of bounds." verbose="Array &apos;entity_7[24]&apos; accessed at index 77, which is out of bounds." cwe="119">
+            <location file="b29cef97.c" line="18" info="Array index out of bounds"/>
+            <location file="b29cef97.c" line="6" info="Assignment &apos;entity_4=77&apos;, assigned value is 77"/>
+            <symbol>entity_7</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;entity_4&apos; can be reduced." verbose="The scope of the variable &apos;entity_4&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="b29cef97.c" line="5"/>
+            <symbol>entity_4</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;entity_7&apos; can be reduced." verbose="The scope of the variable &apos;entity_7&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="b29cef97.c" line="12"/>
+            <symbol>entity_7</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;entity_5&apos; is assigned a value that is never used." verbose="Variable &apos;entity_5&apos; is assigned a value that is never used." cwe="563">
+            <location file="b29cef97.c" line="22"/>
+            <symbol>entity_5</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;entity_7&apos; is assigned a value that is never used." verbose="Variable &apos;entity_7&apos; is assigned a value that is never used." cwe="563">
+            <location file="b29cef97.c" line="18"/>
+            <symbol>entity_7</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;entity_3&apos; is assigned a value that is never used." verbose="Variable &apos;entity_3&apos; is assigned a value that is never used." cwe="563">
+            <location file="b29cef97.c" line="26"/>
+            <symbol>entity_3</symbol>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;entity_7[24]&apos; accessed at index 77, which is out of bounds." verbose="Array &apos;entity_7[24]&apos; accessed at index 77, which is out of bounds." cwe="119">
+            <location file="b29cef97.c" line="18" info="Array index out of bounds"/>
+            <symbol>entity_7</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

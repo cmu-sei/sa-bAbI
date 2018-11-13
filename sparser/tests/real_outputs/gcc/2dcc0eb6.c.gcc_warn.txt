@@ -1,0 +1,10 @@
+2dcc0eb6.c: In function 'main':
+2dcc0eb6.c:15:10: warning: variable 'entity_6' set but not used [-Wunused-but-set-variable]
+     char entity_6[36];          // Tag.BODY
+          ^~~~~~~~
+2dcc0eb6.c:11:10: warning: variable 'entity_1' set but not used [-Wunused-but-set-variable]
+     char entity_1[42];          // Tag.BODY
+          ^~~~~~~~
+2dcc0eb6.c:10:10: warning: variable 'entity_2' set but not used [-Wunused-but-set-variable]
+     char entity_2[49];          // Tag.BODY
+          ^~~~~~~~
