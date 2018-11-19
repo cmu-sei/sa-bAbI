@@ -51,14 +51,20 @@ fi
 
 DATA_DIR=$working_dir docker-compose run --rm sababi bash -c "\
     python /sa_babi/score_tool_outputs.py $validation_arg \
+    -v \
     /mnt/data/manifest.json \
     /sa_babi/checkers.yaml \
-    /mnt/data/alerts/*.csv > /mnt/data/tool_confusion_matrix.csv"
+    /mnt/data/alerts/*.csv \
+    > /mnt/data/tool_confusion_matrix.csv \
+    2> /mnt/data/score_all.log"
 
 
 DATA_DIR=$working_dir docker-compose run --rm sababi bash -c "\
     python /sa_babi/score_tool_outputs.py $validation_arg \
     --sound_only\
+    -v \
     /mnt/data/manifest.json \
     /sa_babi/checkers.yaml \
-    /mnt/data/alerts/*.csv > /mnt/data/tool_confusion_matrix_sound.csv"
+    /mnt/data/alerts/*.csv \
+    > /mnt/data/tool_confusion_matrix_sound.csv \
+    2> /mnt/data/score_sound.log"
